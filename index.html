@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/37df75b44e.js" crossorigin="anonymous"></script>
+  <title>Desktop Calendar</title>
+</head>
+<body>
+  <div class="taskbar">
+    <div class="time-section" id="time-trigger">
+      <span id="taskbar-time">--:-- --</span>
+      <span id="taskbar-date">--/--/----</span>
+    </div>
+  </div>
+
+  <div class="calendar-popup" id="calendar-popup">
+    <div class="popup-time-section">
+      <div id="popup-current-time">--:--:-- --</div>
+      <div id="popup-current-date">Loading...</div>
+    </div>
+    <div class="popup-calendar-header">
+      <span id="popup-current-month">November 2024</span>
+      <div class="arrows">
+        <i class="fas fa-chevron-up" id="popup-prev-month"></i>
+        <i class="fas fa-chevron-down" id="popup-next-month"></i>
+      </div>
+    </div>
+    <div class="popup-calendar-days">
+      <div class="day">Su</div>
+      <div class="day">Mo</div>
+      <div class="day">Tu</div>
+      <div class="day">We</div>
+      <div class="day">Th</div>
+      <div class="day">Fr</div>
+      <div class="day">Sa</div>
+    </div>
+    <div class="popup-calendar-dates" id="popup-calendar-dates">
+      <!-- Dates will be dynamically inserted -->
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  background: url(bg.png) no-repeat;
+  background-size: cover;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+  padding: 0 15px;
+  z-index: 10;
+}
+
+.time-section {
+  cursor: pointer;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.time-section:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.time-section span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.calendar-popup {
+    position: fixed;
+    bottom: 50px;
+    right: -1px;
+    width: 350px;
+    background-color: #2b2b2b;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 100;
+}
+
+.popup-time-section {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+#popup-current-time {
+  font-size: 26px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+#popup-current-date {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.popup-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.popup-calendar-header span {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.popup-calendar-header .arrows i {
+  font-size: 18px;
+  color: #ffffff;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.popup-calendar-header .arrows i:hover {
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+}
+
+.popup-calendar-days, .popup-calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.day {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #ccc;
+  font-weight: normal;
+}
+
+.date {
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.date:hover {
+  background: #444;
+}
+
+.date.today {
+  background: #444;
+  color: white;
+  font-weight: normal;
+}
+
+.date.today:hover {
+  background: #484848;
+}
+
